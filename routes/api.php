@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SubscriberController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/websites/{website}/posts', [PostController::class, 'store'])
     ->name('websites.posts.store');
+
+Route::post('/websites/{website}/subscribe', [SubscriberController::class, 'subscribe'])
+    ->name('websites.subscribe');

@@ -13,7 +13,7 @@ class Website extends Model
 
     public function subscribers()
     {
-        return $this->belongsToMany(Subscriber::class);
+        return $this->belongsToMany(Subscriber::class, 'website_subscriber');
     }
 
     public function posts()
