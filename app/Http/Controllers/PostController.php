@@ -15,6 +15,7 @@ class PostController extends Controller
             'title' => 'required|string',
             'description' => 'required|string',
         ]);
+
         if ($validator->fails()) {
             return response()->json(['error' => $validator->messages()->all()], 422);
         }
