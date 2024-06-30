@@ -97,3 +97,40 @@ This command will check all websites and send new posts to subscribers who haven
 ```shell
 php artisan queue:work
 ```
+
+---
+
+### Task Description
+
+<details>
+<summary>Click to expand</summary>
+
+Create a simple subscription platform (only RESTful APIs with MySQL) in which users can subscribe to a website (there can be multiple websites in the system). Whenever a new post is published on a particular website, all its subscribers shall receive an email with the post title and description in it. (No authentication of any kind is required.)
+
+**MUST:**
+
+-   Use PHP 7._ or 8._
+-   Write migrations for the required tables.
+-   Endpoint to create a "post" for a "particular website".
+-   Endpoint to make a user subscribe to a "particular website" with all the necessary validations included.
+-   Use a command to send emails to the subscribers (the command must check all websites and send all new posts to subscribers which haven't been sent yet).
+-   Use queues to schedule sending in the background.
+-   Ensure no duplicate stories are sent to subscribers.
+-   Deploy the code on a public GitHub repository.
+
+**OPTIONAL:**
+
+-   Seeded data of the websites.
+-   Open API documentation or Postman collection demonstrating available APIs and their usage.
+-   Use of contracts and services.
+-   Use of caching wherever applicable.
+-   Use of events/listeners.
+
+**Note:**
+
+1. Please provide special instructions (if any) to make the codebase run on our local/remote platform.
+2. Only implement what is mentioned in the brief, i.e., only the API, no front-end elements, etc. The code will never be deployed; we just want to see your coding skills.
+3. There isn't a strict deadline. The faster the better; however, code quality (and implementing it as mentioned in the brief) is the most important. However, it shouldn't take more than a couple of hours.
+4. If anything isn't clear, just implement it according to your understanding. There won't be any further explanations; the task is clear. As long as what you do doesn't contradict the briefing, it's fine.
+
+</details>
