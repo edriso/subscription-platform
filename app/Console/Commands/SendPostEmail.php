@@ -37,7 +37,7 @@ class SendPostEmail extends Command
                 $this->sendEmailsToSubscriber($subscriber, $post);
             }
 
-            $post->update(['email_sent_at' => now()]);
+            $post->forceFill(['email_sent_at' => now()])->save();
         }
 
         $this->info('Post email sent successfully.');
